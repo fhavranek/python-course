@@ -10,10 +10,10 @@ def password_gen(length=10, specials=3):
 	password = [i for i in range(length)]
 	random.shuffle(list)
 	for i in range(0, specials):
-		password[list.pop()] = random.choice(specials)
+		password[list.pop()] = random.choice(special)
 	for i in list:
 		password[i]= random.choice(basic)
 	return password
 
-print(password_gen())
+print("".join(password_gen()))
 
